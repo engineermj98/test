@@ -1,0 +1,163 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('/fonts/get_schwifty.ttf') format('truetype');
+    /* Otros atributos de la fuente, como peso y estilo, pueden ir aquí */
+}
+body {
+    margin-bottom: 60px;
+    background-image: url('extra/Fondo3.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    /* Opcional: puedes agregar más estilos CSS aquí */
+    
+
+}
+
+#characterList {
+    font-family: 'MiFuente', sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    align-content:center;
+}
+
+.character-item {
+    /* Estilos para cada elemento de la lista */
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que el vídeo cubra el área del contenedor sin distorsión */
+    z-index: -1;
+}
+
+.content {
+    /* Asegúrate de que el contenido esté en una capa superior que el vídeo */
+    position: relative;
+    z-index: 1;
+}
+
+
+.centered-image {
+    text-align: center; /* Centra horizontalmente el contenido del div */
+}
+
+    .centered-image img {
+        display: block; /* Asegura que la imagen sea un elemento de bloque */
+        margin: 0 auto; /* Centra la imagen horizontalmente dentro del div */
+        width: 500px;
+        height:auto;
+    }
+
+.right-align {
+    text-align: right; /* Alinea el texto a la derecha */
+    display: block; /* Hace que el enlace sea un elemento de bloque para ocupar toda la anchura disponible */
+}
+
+.centered-button {
+    text-align: center; /* Centra horizontalmente el contenido */
+    margin-top: 4%; /* Ajusta la distancia desde la parte superior */
+    
+}
+    .centered-button img {
+        width: 25%; /* Ajusta el ancho de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border: solid;
+        border-color: cadetblue;
+        border-radius: 200px 155px 148px 280px / 48px 25px 130px 20px;
+    }
+    .centered-button a {
+        display: inline-block; /* Convierte el enlace en un bloque para que pueda ser centrado */
+    }
+
+.blink {
+    animation: blink 3s infinite; /* Aplica la animación de parpadeo con una duración de 1 segundo y repitiendo infinitamente */
+}
+@keyframes blink {
+    0% {
+        opacity: 1; /* Estado inicial - completamente visible */
+    }
+
+    50% {
+        opacity: 0; /* Estado intermedio - completamente transparente */
+    }
+
+    100% {
+        opacity: 1; /* Estado final - completamente visible */
+    }
+}
+footer {
+    background-color:gre; /* Cambia "cadetblue" al color deseado */
+    border:solid;
+    border-width:thin;
+    border-color: black;
+    height: 5%;
+
+}
+
+.bg-image {
+    background-image: url('extra/Fondo3.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+.character-image {
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    border: 2px solid black; /* Agrega un borde de 2px de ancho y verde */
+    display: inline-block; /* Mostrar la imagen como un bloque en línea */
+    vertical-align: middle; /* Alinear verticalmente la imagen con el texto */
+    margin-right: 10px; /* Espacio a la derecha de la imagen */
+}
+
+
+.character-item {
+    list-style: none; /* Eliminar viñetas de la lista */
+    margin-bottom: 10px; /* Espacio entre cada elemento de la lista */
+}
+
+.character-data {
+    display: inline-block; /* Mostrar los datos del personaje como un bloque en línea */
+    vertical-align: middle; /* Alinear verticalmente los datos con la imagen */
+    background-color: yellow;
+    background-size:500px;
+    border:solid;
+    border-color:lightseagreen;
+    font-size:30px;
+}
+#searchInput {
+    font-size:xx-large;
+    background-color:deepskyblue;
+    font-family:'Century Gothic';
+    font-weight:bold;
+    color:black;
+    align-content:center;
+    text-align:center;
+    border-radius:10%;
+    border-color:black;
+    border-style:solid;
+    margin-bottom:10%;
+}

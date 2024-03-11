@@ -1,0 +1,57 @@
+﻿
+
+<div class="content">
+    <div id="bg-video">
+        <img src="~/extra/Fondo.jpg" alt="">
+    </div>
+    <div>
+        @model List<ModeloPersonaje>
+
+        <div class="centered-image">
+            <img src="~/extra/Titulo2.png" alt="">
+        </div>
+        <div style="text-align:center; align-content:center;">
+            <input type="text" id="searchInput" placeholder="Buscar personaje...">
+        </div>
+        
+
+        <ul id="characterList" style="align-content:center; align-items:center; margin-left:20%;">
+            @foreach (var character in Model)
+            {
+                <li class="character-item">
+                    <img class="character-image btn btn-outline-info" src="@character.image" alt="@character.name">
+                    <div class="character-data btn btn-outline-info rounded-5  ">
+                        <span class="character-name">NAME: @character.name</span><br>
+                        <span class="character-species">SPECIES: @character.species</span><br>
+                        <span class="character-status">STATUS: @character.status</span><br>
+                        <div class="character-details" style="display:none;">
+                            <span>GENDER: @character.gender</span><br>
+                            <span>ORIGIN: @character.species</span><br>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+        <div id="pagination"></div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var searchInput = document.getElementById('searchInput');
+                var characterList = document.getElementById('characterList').getElementsByTagName('li');
+
+                searchInput.addEventListener('input', function () {
+                    var searchTerm = searchInput.value.toLowerCase();
+                    Array.from(characterList).forEach(function (character) {
+                        var characterName = character.textContent.toLowerCase();
+                        if (characterName.includes(searchTerm)) {
+                            character.style.display = 'block';
+                        } else {
+                            character.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+
